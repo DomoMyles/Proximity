@@ -1,7 +1,151 @@
-.sidebar{
-    background-color: red;
-    width: 10%;
+/*setting up the sidebar*/
+.sidebar {
+    background-color: grey;
+    width: 500px;
+    padding: 20px;
+    font-size: 32px;
+    display: block;
+    height: 100vh;
+}
+
+/*set the Results txt to be smaller then the results*/
+.small {
+    font-size: 18px;
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+
+/*design the results*/
+.results-list{
+    text-decoration: underline;
+    color:aqua;
+}
+.results:hover{
+    text-decoration: underline;
+    color:red;
+    cursor:pointer;
 }
 
 
 
+/*  ************************************************
+
+    [Table of Contents]
+    - Color Palette
+    - General Structure
+    - Header and Main Navigation
+    - Primary Content
+    ************************************************  */
+
+
+/*  =============
+    Color Palette
+    ============= */
+
+    :root {
+        --raisin-black: #232020ff;
+        }
+        :root {
+        --light-periwinkle: #d1d7f0;
+        }
+        :root {
+        --amazon: #417b5a;
+        }
+        :root {
+        --yellow-green-crayola: #c3d898;
+        }
+    
+    
+    /*  =================
+        General Structure
+        ================= */
+    
+    .float-left {
+        /* Moves image to the left */
+        float: left;
+        /* Creates space to the right of the image */
+        margin-right: 25px;
+    }
+    
+    .float-right {
+        /* Moves image to the right */
+        float: right;
+        /* Creates space to the left of the image */
+        margin-left: 25px;
+    }
+    
+    /*  ==========================
+        Header and Main Navigation
+        ========================== */
+    
+    
+    /*  ===============
+        Primary Content
+        =============== */
+    
+    /* After clicking on a theater, this is the main are of content that displays
+    the movies and their info */
+    /* The #movies div lists its immediate children divs (columns) in a row, and 
+    wraps */
+    #movies {
+        display: flex;
+        flex-flow: row;
+        background-color: brown;
+        width: 75%
+    }
+    
+    .column1 {
+        display: flex;
+        flex-flow: column wrap;
+        margin: 20px;
+    
+    }
+    
+    .column2 {
+        display: flex;
+        flex-flow: column wrap;
+        margin: 20px;
+    }
+    
+    .card {
+        display: flex;
+        flex-flow: row wrap;
+        background-color: green;
+        color: #ffffff;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin: 10px;
+        padding: 30px;
+    }
+    
+    .time {
+        background-color: orange;
+        color: #ffffff;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: center;
+        margin: 5px;
+        padding: 8px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        height: 50px;
+        width: 50px;
+    }
+    
+    
+    /* @media screen and (max-width: 600px) {
+        .column {
+          width: 100%;
+          display: block;
+          margin-bottom: 20px;
+        }
+      } */
+    
+    /* .column2 {
+        background-color: green;
+        color: #ffffff;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        width: 50%;
+        height: 300px;
+        margin-bottom: 20px;
+        padding: 50px;
+    } */

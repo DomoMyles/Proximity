@@ -1,41 +1,125 @@
 <!DOCTYPE html>
 <html>
+<!---->
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hello Bulma!</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" type="text/css" href=".assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
 
+<!--Add the header-->
+
 <body>
-  <section class ="hero is-primary">
+  <section class="hero is-primary">
     <div class="hero-body">
-      <p class="title">Whats here??</p>
+      <header class="title">Fresh Movies Near You!!!</header>
     </div>
   </section>
-  <br>
-  <div class="columns">
-    <div id="Search" class="column">
-      <p class="results"></p>
-        <ul>whoo
-          <li>What</li>
-          <li>What</li>
-          <li>What</li>
-          <li>What</li>
-        </ul>
-      First column
+
+  <!--Add a sidebar for searching-->
+  <div class="sidebar" size="50">
+    <div class="form-container">
+      <h1> Enter a city below </h1>
+      <input id="search" type="text" class="input" placeholder="search..." />
+      <!--Add the textbox with a clear funciton-->
+      <button id="Search" onClick="addElement()">Search</button>
     </div>
-    <div class="column">
-      Second column
-    </div>
-    <div class="column">
-      Third column
+<br>
+    <!--Display the results below-->
+    <p class="small" id="content">Results: </p>
+    <div class="results-list" id="list">
+      <ul>
+
+
+      </ul>
+      
+
     </div>
   </div>
+  <div>dasshdioufhefiu</div>
+  <div id="movies" class="float-right">
+    <!-- use this to make this section "hidden"
+    <div id="movies" class="float-right" style="display: none;"> -->
 
-  </aside>
+
+      <!-- Column 1 -->
+      <div class="column1">
+        <!-- Card 1 -->
+        <div class="card">
+          <h2 class="movie-title" id="movieTitle">Movie Title</h2>
+          <div class="time">
+            <p>11:45am</p>
+          </div>
+          <div class="time">
+            <p>6:30pm</p>
+          </div>
+          <div class="time">
+            <p>8:00pm</p>
+          </div>
+          <div class="time">
+            <p>9:30pm</p>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="card">
+          <h2 class="movie-title">Movie Title</h2>
+          <div class="time">
+            <p>11:45am</p>
+          </div>
+          <div class="time">
+            <p>6:30pm</p>
+          </div>
+          <div class="time">
+            <p>8:00pm</p>
+          </div>
+          <div class="time">
+            <p>9:30pm</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="column2">
+        <!-- Card 1 -->
+        <div class="card">
+          <h2 class="movie-title">Movie Title</h2>
+          <div class="time">
+            <p>11:45am</p>
+          </div>
+          <div class="time">
+            <p>6:30pm</p>
+          </div>
+          <div class="time">
+            <p>8:00pm</p>
+          </div>
+          <div class="time">
+            <p>9:30pm</p>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="card">
+          <h2 class="movie-title">Movie Title</h2>
+          <div class="time">
+            <p>11:45am</p>
+          </div>
+          <div class="time">
+            <p>6:30pm</p>
+          </div>
+          <div class="time">
+            <p>8:00pm</p>
+          </div>
+          <div class="time">
+            <p>9:30pm</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  <script src="assets/js/script.js"></script>
 </body>
-
 </html>
