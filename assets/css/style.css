@@ -1,14 +1,91 @@
-/*setting up the sidebar*/
-.sidebar {
-    background-color: grey;
-    width: 500px;
-    padding: 20px;
-    font-size: 32px;
-    display: block;
-    height: 100vh;
+/* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+
+#test {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
 }
 
+.h1 {
+    color: black;
+}
+
+.h2 {
+    color: black
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+#first {
+    position: relative;
+    height: 80%;
+    width: 100%;
+}
+
+#new {
+    height: 100%;
+    width: 100%;
+}
+
+#map2 {
+    height: 50%;
+    width: 50%;
+}
+
+#map3 {
+    height: 50%;
+    width: 50%;
+}
+
+
+/* 
+   * Optional: Makes the sample page fill the window. 
+   */
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    height: 30px;
+    margin: 12px 0px;
+    padding: 10px;
+    width: 300px;
+}
+
+
+/*setting up the sidebar*/
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}
+
+.sidebar {
+    display: inline-block;
+    background-color: grey;
+    width: 50%;
+    padding: 20px;
+    font-size: 32px;
+    height: 100%
+}
+
+
 /*set the Results txt to be smaller then the results*/
+
 .small {
     font-size: 18px;
     text-decoration: underline;
@@ -17,16 +94,17 @@
 
 
 /*design the results*/
-.results-list{
+
+.results-list {
     text-decoration: underline;
-    color:aqua;
-}
-.results:hover{
-    text-decoration: underline;
-    color:red;
-    cursor:pointer;
+    color: aqua;
 }
 
+.results:hover {
+    text-decoration: underline;
+    color: red;
+    cursor: pointer;
+}
 
 
 /*  ************************************************
@@ -43,104 +121,112 @@
     Color Palette
     ============= */
 
-    :root {
-        --raisin-black: #232020ff;
-        }
-        :root {
-        --light-periwinkle: #d1d7f0;
-        }
-        :root {
-        --amazon: #417b5a;
-        }
-        :root {
-        --yellow-green-crayola: #c3d898;
-        }
-    
-    
-    /*  =================
+ :root {
+    --raisin-black: #232020ff;
+}
+
+ :root {
+    --light-periwinkle: #d1d7f0;
+}
+
+ :root {
+    --amazon: #417b5a;
+}
+
+ :root {
+    --yellow-green-crayola: #c3d898;
+}
+
+
+/*  =================
         General Structure
         ================= */
-    
-    .float-left {
-        /* Moves image to the left */
-        float: left;
-        /* Creates space to the right of the image */
-        margin-right: 25px;
-    }
-    
-    .float-right {
-        /* Moves image to the right */
-        float: right;
-        /* Creates space to the left of the image */
-        margin-left: 25px;
-    }
-    
-    /*  ==========================
+
+.float-left {
+    /* Moves image to the left */
+    float: left;
+    /* Creates space to the right of the image */
+    margin-right: 25px;
+}
+
+.float-right {
+    /* Moves image to the right */
+    float: right;
+    /* Creates space to the left of the image */
+    margin-left: 25px;
+}
+
+
+/*  ==========================
         Header and Main Navigation
         ========================== */
-    
-    
-    /*  ===============
+
+
+/*  ===============
         Primary Content
         =============== */
-    
-    /* After clicking on a theater, this is the main are of content that displays
+
+
+/* After clicking on a theater, this is the main are of content that displays
     the movies and their info */
-    /* The #movies div lists its immediate children divs (columns) in a row, and 
+
+
+/* The #movies div lists its immediate children divs (columns) in a row, and 
     wraps */
-    #movies {
-        display: flex;
-        flex-flow: row;
-        background-color: brown;
-        width: 75%
-    }
-    
-    .column1 {
-        display: flex;
-        flex-flow: column wrap;
-        margin: 20px;
-    
-    }
-    
-    .column2 {
-        display: flex;
-        flex-flow: column wrap;
-        margin: 20px;
-    }
-    
-    .card {
-        display: flex;
-        flex-flow: row wrap;
-        background-color: green;
-        color: #ffffff;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        margin: 10px;
-        padding: 30px;
-    }
-    
-    .time {
-        background-color: orange;
-        color: #ffffff;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        text-align: center;
-        margin: 5px;
-        padding: 8px;
-        padding-top: 1px;
-        padding-bottom: 1px;
-        height: 50px;
-        width: 50px;
-    }
-    
-    
-    /* @media screen and (max-width: 600px) {
+
+#movies {
+    display: flex;
+    flex-flow: row;
+    background-color: brown;
+    width: 75%
+}
+
+.column1 {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 20px;
+}
+
+.column2 {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 20px;
+}
+
+.card {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: green;
+    color: #ffffff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 10px;
+    padding: 30px;
+}
+
+.time {
+    background-color: orange;
+    color: #ffffff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin: 5px;
+    padding: 8px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    height: 50px;
+    width: 50px;
+}
+
+
+/* @media screen and (max-width: 600px) {
         .column {
           width: 100%;
           display: block;
           margin-bottom: 20px;
         }
       } */
-    
-    /* .column2 {
+
+
+/* .column2 {
         background-color: green;
         color: #ffffff;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
