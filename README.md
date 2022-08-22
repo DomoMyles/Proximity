@@ -13,7 +13,7 @@ The primary areas of code and technology that were focused are as follows:
 * Used various pseudo variables to create custom color variables in the CSS, colors that follow a strict color palette that matches our project presentation
 
 ### Deployed Application
-https://domomyles.github.io/fresh-movies-near-you/
+https://domomyles.github.io/Proximity/
 
 
 *Picture:
