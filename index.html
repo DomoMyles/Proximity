@@ -1,125 +1,76 @@
-<!DOCTYPE html>
 <html>
-<!---->
 
 <head>
-  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Bulma!</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+  <!--  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" /> -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <script
+    src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyD7FQ6DvobhmLrRUoVOKFM7O-YhwEF7coE"></script>
 </head>
-
-<!--Add the header-->
 
 <body>
   <section class="hero is-primary">
     <div class="hero-body">
-      <header class="title">Fresh Movies Near You!!!</header>
+      <header class="title">Places near you!</header>
     </div>
   </section>
-
-  <!--Add a sidebar for searching-->
-  <div class="sidebar" size="50">
-    <div class="form-container">
-      <h1> Enter a city below </h1>
-      <input id="search" type="text" class="input" placeholder="search..." />
-      <!--Add the textbox with a clear funciton-->
-      <button id="Search" onClick="addElement()">Search</button>
+  <div class="wrapper">
+    <div class="sidebar">
+      <div class="form-container">
+        <!--The div element for the map -->
+        <input id="search_input" placeholder="Enter a US address" />
+        <select name="cars" id="selectBar">
+          <option value="Bank">Bank</option>
+          <option value="Restaurant">Restaurant</option>
+          <option value="Theater">Theater</option>
+          <option value="Museum">Museum</option>
+          <option value="Pharmacy">Pharmacy</option>
+          <option value="Library">Library</option>
+        </select>
+        <button type="button" class="btn col-sm-12 bg-success" id="search_button">Search</button>
+        </button>
+      </div>
+      <section class="wrapperresults">
+        <div id="new"></div>
+        <div id="new">
+          <h4>--EXAMPLE-- Chase Bank</h4>
+          <h6> 28 Liberty Street, New York</h6>
+          <h5>Cell phone: (212) 552-3819</h5>
+          <li>Monday: 9:00 AM - 5:00 PM </li>
+          <li>Tuesday: 9:00 AM - 5:00 PM</li>
+          <li>Wednesday: 9:00 AM - 5:00 PM</1i>
+          <li>Thursday: 9:00 AM - 5:00 PM</li>
+          <li>Friday: 9:00 AM - 5:00 PM</li>
+          <li>Saturday: Closed</li>
+          <li>Sunday: Closed</li>
+          </ul>
+          <h3>Miles: 0.5 mi</h3>
+          <h3>Time: 4 mins</h3>
+        </div>
+      </section>
     </div>
-<br>
-    <!--Display the results below-->
-    <p class="small" id="content">Results: </p>
-    <div class="results-list" id="list">
-      <ul>
-
-
-      </ul>
-      
+    <div class="sidebar">
+      <div id='first'>
+        <div id="map"></div>
+      </div>
 
     </div>
+
   </div>
-  <div>dasshdioufhefiu</div>
-  <div id="movies" class="float-right">
-    <!-- use this to make this section "hidden"
-    <div id="movies" class="float-right" style="display: none;"> -->
 
-
-      <!-- Column 1 -->
-      <div class="column1">
-        <!-- Card 1 -->
-        <div class="card">
-          <h2 class="movie-title" id="movieTitle">Movie Title</h2>
-          <div class="time">
-            <p>11:45am</p>
-          </div>
-          <div class="time">
-            <p>6:30pm</p>
-          </div>
-          <div class="time">
-            <p>8:00pm</p>
-          </div>
-          <div class="time">
-            <p>9:30pm</p>
-          </div>
-        </div>
-        <!-- Card 2 -->
-        <div class="card">
-          <h2 class="movie-title">Movie Title</h2>
-          <div class="time">
-            <p>11:45am</p>
-          </div>
-          <div class="time">
-            <p>6:30pm</p>
-          </div>
-          <div class="time">
-            <p>8:00pm</p>
-          </div>
-          <div class="time">
-            <p>9:30pm</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Column 2 -->
-      <div class="column2">
-        <!-- Card 1 -->
-        <div class="card">
-          <h2 class="movie-title">Movie Title</h2>
-          <div class="time">
-            <p>11:45am</p>
-          </div>
-          <div class="time">
-            <p>6:30pm</p>
-          </div>
-          <div class="time">
-            <p>8:00pm</p>
-          </div>
-          <div class="time">
-            <p>9:30pm</p>
-          </div>
-        </div>
-        <!-- Card 2 -->
-        <div class="card">
-          <h2 class="movie-title">Movie Title</h2>
-          <div class="time">
-            <p>11:45am</p>
-          </div>
-          <div class="time">
-            <p>6:30pm</p>
-          </div>
-          <div class="time">
-            <p>8:00pm</p>
-          </div>
-          <div class="time">
-            <p>9:30pm</p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-  <script src="assets/js/script.js"></script>
 </body>
+<script>
+</script>
+<script src="./assets/js/script.js">
+</script>
+
 </html>
