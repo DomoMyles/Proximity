@@ -78,7 +78,7 @@ function searchResultsPlace(la, lo) {
     }
     var request = {
         location: city,
-        radius: '10000',
+        radius: '1000000',
         type: [search]
     };
 
@@ -237,8 +237,8 @@ function showIcons(results) {
                         }
 
 
-                        name.text("Name: " + arrayNotEmpty[auxI].name);
-                        address.text("Address: " + arrayNotEmpty[auxI].vicinity);
+                        name.text(arrayNotEmpty[auxI].name);
+                        address.text(arrayNotEmpty[auxI].vicinity);
                         if (arrayNotEmpty[auxI].formatted_phone_number != undefined) {
                             number.text("Cell phone: " + arrayNotEmpty[auxI].formatted_phone_number);
                         }

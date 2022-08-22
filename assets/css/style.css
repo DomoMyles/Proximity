@@ -1,178 +1,10 @@
-/* 
- * Always set the map height explicitly to define the size of the div element
- * that contains the map. 
- */
-
- #test {
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-}
-
-.h1 {
-    color: black;
-}
-
-.h2 {
-    color: black
-}
-
-#map {
-    height: 100%;
-    width: 100%;
-}
-
-#first {
-    position: relative;
-    height: 80%;
-    width: 100%;
-}
-
-#new {
-    height: 100%;
-    width: 100%;
-}
-
-#map2 {
-    height: 50%;
-    width: 50%;
-}
-
-#map3 {
-    height: 50%;
-    width: 50%;
-}
-
-
-/* 
-   * Optional: Makes the sample page fill the window. 
-   */
-
-html,
-body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-input {
-    height: 30px;
-    margin: 12px 0px;
-    padding: 10px;
-    width: 300px;
-}
-
-
-/*setting up the sidebar*/
-
-.wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 100%;
-    background-color: red;
-}
-
-.sidebar {
-    display: inline-block;
-    background-color: grey;
-    width: 50%;
-    padding: 20px;
-    font-size: 32px;
-    height: 100%
-}
-
-
-/*set the Results txt to be smaller then the results*/
-
-.small {
-    font-size: 18px;
-    text-decoration: underline;
-    font-weight: bolder;
-}
-
-
-/*design the results*/
-
-.name{
-    font-size: 40
-}
-
-.results-list {
-    text-decoration: underline;
-    color: aqua;
-}
-
-.results:hover {
-    text-decoration: underline;
-    color: red;
-    cursor: pointer;
-}
-
-
-
-
-
-/* Displaying of the results */
-/*Name of location */
-#new{
-    background-color: darkgray;
-    height: 500px;
-    width: 400px;
-    padding: 10px;
-    flex-wrap: wrap;
-    border-radius: 10px;
-    border: solid;
-    box-shadow: 5px;
-}
-
-h4{
-    font-weight: bolder;
-    font-size: 24px;
-}
-h5{
-    font-size: 13px;
-    color: blue;
-}
-
-h6{
-    font-size: 16px;
-    color: green;
-}
-
-li{
-    font-size: 16;
-}
-ul{
-    padding: 10px;
-}
-
-
-
-/* Adress of  location*/
-
-
-
-/* cell phone*/
-
-
-
-/* schedual*/
-
-
-
-/* distance */
-
-
-
-/* time*/
 /*  ************************************************
+
     [Table of Contents]
     - Color Palette
-    - General Structure
     - Header and Main Navigation
-    - Primary Content
+    - Map
+    - Locations Results 
     ************************************************  */
 
 
@@ -180,37 +12,222 @@ ul{
     Color Palette
     ============= */
 
-
-/*  =================
-        General Structure
-        ================= */
-
-
-/*  ==========================
+    :root {
+        --blue: #159ac6;
+    }
+    :root {
+        --teal: #3faba5;
+    }
+    :root {
+        --yellow: #f8aa25;
+    }
+    :root {
+        --red: #e94974;
+    }
+    :root {
+        --dark-blue: #29283d;
+    }
+    :root {
+        --dark: #1e1e2c;
+    }
+    :root {
+        --grey: #e2e2e2;
+    }
+    
+        
+    /*  ==========================
         Header and Main Navigation
         ========================== */
-
-
-/*  ===============
-        Primary Content
-        =============== */
-
-
-/* @media screen and (max-width: 600px) {
-        .column {
-          width: 100%;
-          display: block;
-          margin-bottom: 20px;
-        }
-      } */
-
-
-/* .column2 {
-        background-color: green;
-        color: #ffffff;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+    .hero {
+        background-color: var(--blue);
+    }
+    
+    /*  ====
+        Map
+        ==== */
+    
+    /* 
+     * Always set the map height explicitly to define the size of the div element
+     * that contains the map. 
+     */
+    
+     #test {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .h1 {
+        color: black;
+    }
+    
+    .h2 {
+        color: black
+    }
+    
+    #map {
+        height: 100%;
+        width: 100%;
+    }
+    
+    #first {
+        position: relative;
+        height: 80%;
+        width: 100%;
+    }
+    
+    #new {
+        height: 100%;
+        width: 100%;
+    }
+    
+    #map2 {
+        height: 50%;
         width: 50%;
-        height: 300px;
-        margin-bottom: 20px;
-        padding: 50px;
-    } */
+    }
+    
+    #map3 {
+        height: 50%;
+        width: 50%;
+    }
+    
+    
+    /* 
+       * Optional: Makes the sample page fill the window. 
+       */
+    
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    input {
+        height: 30px;
+        margin: 12px 0px;
+        padding: 10px;
+        width: 300px;
+    }
+    
+    
+    /*setting up the sidebar*/
+    
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        background-color: red;
+    }
+
+    .wrapperresults div{
+        margin: 60px;
+    }
+    
+    .sidebar {
+        display: inline-block;
+        background-color: var(--dark);
+        width: 50%;
+        padding: 20px;
+        font-size: 32px;
+        height: 100%
+    }
+    
+    
+    /*set the Results txt to be smaller then the results*/
+    
+    .small {
+        font-size: 18px;
+        text-decoration: underline;
+        font-weight: bolder;
+    }
+    
+    
+    /*design the results*/
+    
+    .name{
+        font-size: 40
+    }
+    
+    .results-list {
+        text-decoration: underline;
+        color: aqua;
+        margin: 20px;
+    }
+    
+    .results:hover {
+        text-decoration: underline;
+        color: red;
+        cursor: pointer;
+    }
+    
+   .wrapperresults{
+        margin: 20px;
+        display: flex;
+    }
+    
+    
+    
+    
+    /* ================
+       Location Results
+       ================ */
+    
+    /* Displaying of the results */
+    /*Name of location */
+    #new{
+        background-color: var(--dark-blue);
+        color: var(--grey);
+        height: 500px;
+        width: 400px;
+        padding: 10px;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        border: solid;
+        box-shadow: 5px;
+    }
+    
+    h4{
+        font-weight: bolder;
+        font-size: 24px;
+        color: var(--teal);
+    }
+    h5{
+        font-size: 13px;
+        color: var(--red);
+    }
+    
+    h6{
+        font-size: 16px;
+        color: var(--yellow);
+    }
+    
+    li{
+        font-size: 16;
+    }
+    ul{
+        padding: 10px;
+    }
+    
+    
+    
+    /* Address of location*/
+    
+    
+    
+    /* cell phone*/
+    
+    
+    
+    /* schedule*/
+    
+    
+    
+    /* distance */
+    
+    
+    
+    /* time*/
